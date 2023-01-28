@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="590.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableau.UtilisateurController">
+   <children>
+      <TableView fx:id="tablehierarche" layoutX="4.0" layoutY="162.0" prefHeight="426.0" prefWidth="730.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="colonne1" prefWidth="77.60003662109375" text="ID" />
+          <TableColumn fx:id="colonne2" minWidth="9.60003662109375" prefWidth="101.5999755859375" text="nom" />
+            <TableColumn fx:id="colonne3" prefWidth="120.79997253417969" text="adresse" />
+            <TableColumn fx:id="colonne4" prefWidth="127.99993896484375" text="mdp" />
+            <TableColumn fx:id="colonne5" prefWidth="99.99993896484375" text="date" />
+            <TableColumn fx:id="colonne6" prefWidth="99.99993896484375" text="email" />
+            <TableColumn prefWidth="99.99993896484375" text="TF" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="108.0" prefWidth="738.0" styleClass="bord" stylesheets="@style.css">
+         <children>
+            <Label layoutX="39.0" layoutY="33.0" text="/Users">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="ajouter" layoutX="4.0" layoutY="116.0" onAction="#pageAjouter" prefHeight="39.0" prefWidth="102.0" styleClass="corps" stylesheets="@style.css" text="Ajouter">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="119.0" layoutY="116.0" prefHeight="26.0" prefWidth="112.0" styleClass="supp" stylesheets="@style.css" text="Supprimer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="240.0" layoutY="116.0" prefHeight="26.0" prefWidth="120.0" styleClass="modif" stylesheets="@style.css" text="modifier">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
