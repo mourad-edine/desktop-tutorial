@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="520.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableau.FxlogController">
+   <children>
+      <AnchorPane layoutX="178.0" layoutY="67.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutY="-4.0" prefHeight="536.0" prefWidth="334.0" styleClass="login-bg" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="109.0" layoutY="102.0" text="s'inscrire">
+                     <font>
+                        <Font name="Microsoft YaHei Light" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="nom" layoutX="84.0" layoutY="192.0" onAction="#handlenom" promptText="Username" stylesheets="@style.css">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <PasswordField fx:id="motpasse" layoutX="84.0" layoutY="283.0" onAction="#handlemot" prefHeight="26.0" prefWidth="154.0" promptText="Mot de passe" />
+                  <Button fx:id="bouton1" layoutX="84.0" layoutY="332.0" mnemonicParsing="false" onAction="#inserer" prefHeight="26.0" prefWidth="96.0" styleClass="button1" stylesheets="@style.css" text="sign up">
+                     <font>
+                        <Font name="Microsoft New Tai Lue Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Hyperlink fx:id="lien" layoutX="180.0" layoutY="334.0" onAction="#hendlelien" text="se connecter" textFill="#f7f6f6">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Hyperlink>
+                  <FontAwesomeIcon glyphName="USER" layoutX="137.0" layoutY="78.0" size="3em" />
+                  <TextField fx:id="email" layoutX="84.0" layoutY="239.0" onAction="#handlenom" promptText="email" stylesheets="@style.css">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker fx:id="datex" layoutX="84.0" layoutY="144.0" prefHeight="26.0" prefWidth="154.0" />
+               </children></AnchorPane>
+            <AnchorPane layoutX="334.0" prefHeight="528.0" prefWidth="334.0" styleClass="button2" stylesheets="@style.css">
+               <children>
+                  <ImageView fx:id="imageview" fitHeight="150.0" fitWidth="200.0" layoutX="92.0" layoutY="114.0" onDragDetected="#handleimage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Downloads/118526412_183300929901423_8096785470324312637_n.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="close" layoutX="226.0" layoutY="17.0" mnemonicParsing="false" onAction="#exit" text="Button" />
+               </children></AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

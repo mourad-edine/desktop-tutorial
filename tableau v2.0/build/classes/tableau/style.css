@@ -1,0 +1,59 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 11 janv. 2023, 09:59:39
+    Author     : Manouher
+*/
+.back{
+    -fx-background-color : #3f48cc;
+}
+
+.login-bg{
+    -fx-background-color : linear-gradient(to bottom right,#6a9ae7,#426fb1);
+}
+.button1{
+    -fx-background-color : white;
+    -fx-cursor : hand;
+}
+.button2{
+    -fx-background-color : white;
+    -fx-cursor : hand;
+}
+.button1:hover{
+    -fx-transition : .2s;
+    -fx-background-color : linear-gradient(to bottom right,#6a9ae7,#426fb1);;
+}
+.reflet{
+    -fx-background-color : #fefefe;
+}
+.tete{
+    
+    -fx-background-color : #121E31;
+}
+.corps{
+    -fx-background-color : #0D9488;
+}
+.exit{
+    -fx-background-radius : 50px;
+    -fx-background-color : red;
+}
+
+.bord{
+    
+    -fx-background-color : #0D9488;
+}
+.haut{
+    
+    -fx-background-color : #a3a3a3;
+}
+.supp{
+    -fx-background-color : #ef4444;
+}
+.modif{
+    -fx-background-color : #22c55e;
+}
+.af{
+    -fx-background-color : #d1d5db;
+}
