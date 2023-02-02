@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableau.Page3Controller">
+   <children>
+      <AnchorPane layoutX="-1.0" prefHeight="720.0" prefWidth="200.0" styleClass="corps" stylesheets="@style.css">
+         <children>
+            <Pane layoutY="-1.0" prefHeight="99.0" prefWidth="200.0" styleClass="tete" stylesheets="@style.css">
+               <children>
+                  <Label layoutX="45.0" layoutY="34.0" text="REFLETHQD" textFill="#fcf7f7">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <JFXButton fx:id="ajout" layoutX="30.0" layoutY="106.0" onAction="#ajoutproduit" prefHeight="46.0" prefWidth="128.0" text="AJOUTER-PRODUIT" />
+            <JFXButton fx:id="util" layoutX="48.0" layoutY="163.0" onAction="#utilisateur" prefHeight="46.0" prefWidth="110.0" text="GERER-USER" />
+            <JFXButton fx:id="Archi" layoutX="48.0" layoutY="225.0" onAction="#Archives" prefHeight="46.0" prefWidth="110.0" text="ARCHIVES" />
+            <JFXButton layoutX="48.0" layoutY="287.0" prefHeight="46.0" prefWidth="110.0" text="STAT" />
+            <Button fx:id="retour" layoutX="77.0" layoutY="361.0" mnemonicParsing="false" onAction="#retour" styleClass="bord" stylesheets="@style.css" text="RETOUR" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="root" layoutX="199.0" layoutY="95.0" prefHeight="594.0" prefWidth="738.0" />
+      <Pane layoutX="199.0" layoutY="-1.0" prefHeight="99.0" prefWidth="738.0" styleClass="haut" stylesheets="@style.css">
+         <children>
+            <FontAwesomeIcon glyphName="USER" layoutX="691.0" layoutY="45.0" size="2em" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
