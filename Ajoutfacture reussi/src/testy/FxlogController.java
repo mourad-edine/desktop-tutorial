@@ -103,7 +103,8 @@ public class FxlogController implements Initializable {
          load();
          datax = FXCollections.observableArrayList();
          afficher();
-        
+         charger();
+         
          
     
     }
@@ -172,19 +173,13 @@ public class FxlogController implements Initializable {
                 
                 int result = statement.executeUpdate();
                 
-                
-                if(result==1){
-                    
-                    JOptionPane.showMessageDialog(null,"enregistré avec succes");
-                }else{
-                    JOptionPane.showMessageDialog(null,"echec !");
-                }
-            
             }catch(SQLException e){
                 e.printStackTrace();
             
             
             }
+            charger();
+            afficher();
     
     }
     
@@ -194,9 +189,29 @@ public class FxlogController implements Initializable {
          colonn2.setCellValueFactory(new PropertyValueFactory<>("designation"));
          colonn3.setCellValueFactory(new PropertyValueFactory<>("prix_unit"));
          colonn4.setCellValueFactory(new PropertyValueFactory<>("prixT"));
+         tablefacture.setItems(datax);
         
     }
     
+    public void charger(){
+        
+        try {
+            statement = con.prepareStatement("SELECT quantite,nom_produit,punitaire,ptotal FROM archivefacture");
+            result = statement.executeQuery();
+            
+            while(result.next()){
+                datax.add(new facture(
+                result.getInt("quantite"),
+                result.getString("nom_produit"),
+                 result.getInt("punitaire"), 
+                 result.getInt("ptotal")
+              ));  
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(FxlogController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        tablefacture.setItems(datax);
     
+    }
     
 }
