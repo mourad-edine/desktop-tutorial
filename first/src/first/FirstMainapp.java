@@ -38,3 +38,19 @@ public class FirstMainapp {
     
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+SELECT eleve.nom,note.noteglobal,matiere.nom_matiere 
+FROM eleve,note,matiere
+WHERE eleve.id = note.id_eleve AND note.id_matiere = matiere.id;
