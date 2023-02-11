@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="590.0" prefWidth="738.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tableau.UtilisateurController">
+   <children>
+      <TableView fx:id="tablehierarche" layoutX="4.0" layoutY="114.0" onMouseClicked="#suprimere" prefHeight="385.0" prefWidth="731.0" stylesheets="@style.css">
+        <columns>
+          <TableColumn fx:id="colonne1" prefWidth="77.60003662109375" text="ID" />
+          <TableColumn fx:id="colonne2" minWidth="9.60003662109375" prefWidth="75.2000503540039" text="nom" />
+            <TableColumn fx:id="colonne3" prefWidth="119.20001220703125" text="prenom" />
+            <TableColumn fx:id="colonne4" prefWidth="156.0" text="adresse" />
+            <TableColumn fx:id="colonne5" prefWidth="99.99993896484375" text="poste" />
+            <TableColumn fx:id="colonne6" prefWidth="99.99993896484375" text="email" />
+            <TableColumn fx:id="colonne7" prefWidth="99.99993896484375" text="mot de passe" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="108.0" prefWidth="738.0" styleClass="bord" stylesheets="@style.css">
+         <children>
+            <Label layoutX="39.0" layoutY="33.0" text="/Users">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <JFXButton fx:id="ajouter" layoutX="16.0" layoutY="540.0" onAction="#pageAjouter" prefHeight="30.0" prefWidth="112.0" styleClass="corps" stylesheets="@style.css" text="Ajouter">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="146.0" layoutY="540.0" onAction="#eliminer" prefHeight="22.0" prefWidth="112.0" styleClass="supp" stylesheets="@style.css" text="Supprimer">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <TextField fx:id="txtid" layoutX="14.0" layoutY="506.0" />
+      <TextField fx:id="txtname" layoutX="183.0" layoutY="506.0" />
+   </children>
+</AnchorPane>
